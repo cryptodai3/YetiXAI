@@ -1,58 +1,45 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>YetiXAI | Web3 + AI Platform</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <!-- Theme toggle -->
-  <button class="toggle-btn" onclick="toggleTheme()">Toggle 🌗</button>
+// YetiXAI Animated & Colorful Landing Page
 
-  <header>
-    <img src="assets/yetixai-logo.png" alt="YetiXAI Logo" class="logo"/>
-    <h1>YetiXAI</h1>
-    <p>Web3 + AI Platform powered by YetiDAO</p>
-  </header>
+export default function LandingPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] text-white font-sans overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-  <main>
-    <!-- Intro & actions -->
-    <section class="intro">
-      <h2>Generate AI Texts & Images</h2>
-      <p>Login with X (Twitter) and connect wallet to begin using YetiXAI services.</p>
-      <button onclick="loginWithX()">Login with X</button>
-      <button onclick="connectWallet()">Connect Wallet</button>
-    </section>
+        {/* Left section - Text Content */}
+        <div className="space-y-6 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 text-transparent bg-clip-text">
+            YetiXAI
+          </h1>
+          <p className="text-lg md:text-xl text-gray-300">
+            ⚡ Your Next-Gen AI Companion — Powered by Web3.
+            
+            <br />
+            Login with Twitter, connect your wallet, and create magic with DeepSeek + Gemini AI.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="px-6 py-3 rounded-2xl bg-pink-600 hover:bg-pink-700 transition shadow-xl text-white font-semibold">
+              🚀 Launch App
+            </button>
+            <button className="px-6 py-3 rounded-2xl border border-white hover:bg-white hover:text-black transition shadow-md text-white">
+              📜 Read Litepaper
+            </button>
+          </div>
+        </div>
 
-    <!-- Credits purchase -->
-    <section class="credits">
-      <h3>Buy Credits</h3>
-      <p>Use $YETI or USDT to purchase credits for generation</p>
-      <button onclick="window.open('https://cryptodai3.github.io/YetiXAI/buy-credits','_blank')">
-        Buy Credits
-      </button>
-    </section>
+        {/* Right section - Animated Yeti + Color visuals */}
+        <div className="flex justify-center items-center animate-bounce-in">
+          <img
+            src="/yeti-colorful.gif"
+            alt="YetiXAI Mascot"
+            className="w-72 md:w-96 rounded-full border-4 border-white shadow-2xl"
+          />
+        </div>
+      </div>
 
-    <!-- Status messages -->
-    <section class="status">
-      <p id="status-message">Awaiting login...</p>
-    </section>
-
-    <!-- New: YetiXAI Bot Chat -->
-    <section class="chatbot">
-      <h3>Chat with YetiXAI Bot</h3>
-      <div id="chat-container"></div>
-      <form id="chat-form">
-        <input type="text" id="chat-input" placeholder="Ask me anything…" required />
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 YetiXAI. Powered by <strong>YetiDAO</strong>.</p>
-  </footer>
-</body>
-</html>
+      {/* Footer */}
+      <footer className="text-center text-sm py-4 text-gray-400 animate-fade-in">
+        Powered by YetiDAO — Join the AI + Web3 Revolution ✨
+      </footer>
+    </div>
+  );
+}

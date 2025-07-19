@@ -1,1 +1,42 @@
 
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YetiXAI | Web3 + AI Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <img src="assets/yetixai-logo.png" alt="YetiXAI Logo" class="logo" />
+    <h1>YetiXAI</h1>
+    <p>Web3 + AI Platform powered by YetiDAO</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Generate AI Texts & Images</h2>
+      <p>Login with X (Twitter) and connect wallet to begin using YetiXAI services.</p>
+      <button onclick="loginWithX()">Login with X</button>
+      <button onclick="connectWallet()">Connect Wallet</button>
+    </section>
+
+    <section class="credits">
+      <h3>Buy Credits</h3>
+      <p>Use $YETI or USDT to purchase credits for generation</p>
+      <button onclick="window.open('https://cryptodai3.github.io/YetiXAI/buy-credits', '_blank')">Buy Credits</button>
+    </section>
+
+    <section class="status">
+      <p id="status-message">Awaiting login...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 YetiXAI. Powered by <strong>YetiDAO</strong>.</p>
+  </footer>
+</body>
+</html>

@@ -1,22 +1,24 @@
-
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>YetiXAI | Web3 + AI Platform</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- Theme toggle -->
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle 🌗</button>
+
   <header>
-    <img src="assets/yetixai-logo.png" alt="YetiXAI Logo" class="logo" />
+    <img src="assets/yetixai-logo.png" alt="YetiXAI Logo" class="logo"/>
     <h1>YetiXAI</h1>
     <p>Web3 + AI Platform powered by YetiDAO</p>
   </header>
 
   <main>
+    <!-- Intro & actions -->
     <section class="intro">
       <h2>Generate AI Texts & Images</h2>
       <p>Login with X (Twitter) and connect wallet to begin using YetiXAI services.</p>
@@ -24,14 +26,28 @@
       <button onclick="connectWallet()">Connect Wallet</button>
     </section>
 
+    <!-- Credits purchase -->
     <section class="credits">
       <h3>Buy Credits</h3>
       <p>Use $YETI or USDT to purchase credits for generation</p>
-      <button onclick="window.open('https://cryptodai3.github.io/YetiXAI/buy-credits', '_blank')">Buy Credits</button>
+      <button onclick="window.open('https://cryptodai3.github.io/YetiXAI/buy-credits','_blank')">
+        Buy Credits
+      </button>
     </section>
 
+    <!-- Status messages -->
     <section class="status">
       <p id="status-message">Awaiting login...</p>
+    </section>
+
+    <!-- New: YetiXAI Bot Chat -->
+    <section class="chatbot">
+      <h3>Chat with YetiXAI Bot</h3>
+      <div id="chat-container"></div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Ask me anything…" required />
+        <button type="submit">Send</button>
+      </form>
     </section>
   </main>
 

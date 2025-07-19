@@ -1,44 +1,77 @@
-
 :root {
-  --bg-light: #ffffff;
-  --bg-dark: #0f172a;
-  --text-light: #000000;
-  --text-dark: #f1f5f9;
-  --primary: #4f46e5;
+  --bg: #fff;
+  --fg: #111;
+  --accent: #0d6efd;
+  --chat-user-bg: #e1f5fe;
+  --chat-bot-bg: #f1f1f1;
 }
+
+html[data-theme="dark"] {
+  --bg: #121212;
+  --fg: #ececec;
+  --accent: #66b2ff;
+  --chat-user-bg: #263238;
+  --chat-bot-bg: #1e1e1e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-light);
-  transition: background 0.3s, color 0.3s;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.dark-mode {
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
-}
+header, main, footer { width: 90%; max-width: 800px; margin: auto; }
 
-header {
-  padding: 20px;
-  text-align: center;
-  background: var(--primary);
-  color: white;
-}
-
-button {
-  background: var(--primary);
-  color: white;
-  padding: 10px 20px;
-  margin: 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
+.logo { height: 50px; }
 
 .toggle-btn {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 1rem; right: 1rem;
+  background: var(--accent);
+  border: none; color: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.intro, .credits, .status, .chatbot {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid var(--fg);
+  border-radius: 6px;
+  background: var(--chat-bot-bg);
+}
+
+.chatbot { display: flex; flex-direction: column; }
+
+#chat-container {
+  flex: 1;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+.chat-message { margin: 0.25rem 0; padding: 0.5rem; border-radius: 4px; }
+
+.user { background: var(--chat-user-bg); align-self: flex-end; }
+.bot  { background: var(--chat-bot-bg); align-self: flex-start; }
+
+#chat-form { display: flex; gap: 0.5rem; }
+
+#chat-input {
+  flex: 1; padding: 0.5rem; border-radius: 4px;
+  border: 1px solid var(--fg);
+}
+
+#chat-form button {
+  padding: 0.5rem 1rem;
+  border: none; background: var(--accent); color: #fff;
+  border-radius: 4px; cursor: pointer;
 }

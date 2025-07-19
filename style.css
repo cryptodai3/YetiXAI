@@ -1,1 +1,44 @@
 
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #0f172a;
+  --text-light: #000000;
+  --text-dark: #f1f5f9;
+  --primary: #4f46e5;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background: var(--primary);
+  color: white;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  margin: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
